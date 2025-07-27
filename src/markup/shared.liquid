@@ -1,0 +1,55 @@
+<style>
+  /* Default image fitting behavior */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .rotate {
+    transform: rotate(90deg);
+  }
+
+  /* Inviting base color tinting */
+  .invert {
+    filter: brightness(1.1) saturate(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Strict black and white (binary) filter */
+  .bw {
+    filter: grayscale(1) contrast(1000%) brightness(1.1);
+    /* contrast(1000%) makes it pure black and white */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .red {
+    border: 1px solid red;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector("img");
+    const layout = document.querySelector(".layout");
+
+    if (img && layout) {
+      img.onload = function () {
+        // scale if displayed without rotation
+        const scale1 = Math.min(layout.offsetWidth / this.naturalWidth, layout.offsetHeight / this.naturalHeight);
+        // scale if displayed with rotation
+        const scale2 = Math.min(layout.offsetWidth / this.naturalHeight, layout.offsetHeight / this.naturalWidth);
+
+        if (scale2 > scale1) {
+          img.classList.add("rotate");
+          img.style.width = layout.offsetHeight + 'px';
+          img.style.height = layout.offsetWidth + 'px';
+        }
+      };
+    }
+  });
+</script>
+
+<div class="layout">
+  <img src="{{ image_url }}" />
+</div>

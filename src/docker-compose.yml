@@ -1,0 +1,11 @@
+services:
+  tebt:
+    build: .
+    image: trmnl-tebt
+    env_file:
+      - .env
+    # Or inject/override individual vars:
+    # environment:
+    #   TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN}"
+    #   TRMNL_PLUGIN_UUID:  "${TRMNL_PLUGIN_UUID}"
+    restart: unless-stopped

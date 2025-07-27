@@ -1,0 +1,45 @@
+# ─── Version‑control ────────────────────────────────────────────────────────
+.git
+.gitmodules
+.gitignore
+
+# ─── Python artefacts ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.so
+
+# ─── Virtual environments ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── Packaging / distribution ───────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ─── Logs & runtime files ───────────────────────────────────────────────────
+*.log
+*.pid
+
+# ─── Coverage / docs artefacts ──────────────────────────────────────────────
+.coverage
+htmlcov/
+docs/_build/
+
+# ─── Editor & OS cruft ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# ─── Environment secrets ────────────────────────────────────────────────────
+.env
+.env.*
+
+# ─── Docker‑specific files we don't need inside the image ───────────────────
+Dockerfile
+docker-compose.yml
+.dockerignore
