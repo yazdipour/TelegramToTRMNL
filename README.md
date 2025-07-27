@@ -7,6 +7,9 @@ A Telegram bot for reading and navigating PDF and EPUB documents, with integrati
 > [!WARNING]  
 > This project was created for the [TRMNL Book Reader Hackathon](https://usetrmnl.com/blog/hackathon-book-readers). It is not intended for production use and may contain bugs or incomplete features. Use at your own risk.
 
+> [!NOTE]  
+> I believe this project can shine with [the new high refresh rate TRMNL displays](https://x.com/useTRMNL/status/1946001923850547700). If you have one, please try it out and share your feedback!
+
 ## Features
 
 - Send a PDF or EPUB to the bot and navigate pages interactively
