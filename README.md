@@ -2,12 +2,22 @@
 
 A Telegram bot for reading and navigating PDF documents, with integration to the TRMNL platform for custom plugin workflows.
 
+![photo](photo.jpeg)
+
 ## Features
 
 - Send a PDF to the bot and navigate pages interactively
 - Each page is converted to an image and can be sent to TRMNL via webhook
 - User authorization via Telegram user IDs
 - Dockerized deployment with `uv` for fast Python dependency management
+
+## Project Structure
+
+- `src/main.py` — Bot entrypoint
+- `src/pdf_utils.py` — PDF page/image utilities
+- `src/trmnl_utils.py` — TRMNL webhook integration
+- `src/markup/` — Liquid templates
+- `src/docker-compose.yml` / `Dockerfile` — Containerization
 
 ## Quick Start
 
@@ -58,14 +68,6 @@ uv pip install --system --no-cache-dir -r <(uv pip compile pyproject.toml)
 ```fish
 uv run src/main.py
 ```
-
-## Project Structure
-
-- `src/main.py` — Bot entrypoint
-- `src/pdf_utils.py` — PDF page/image utilities
-- `src/trmnl_utils.py` — TRMNL webhook integration
-- `src/markup/` — Liquid templates
-- `src/docker-compose.yml` / `Dockerfile` — Containerization
 
 ## License
 
