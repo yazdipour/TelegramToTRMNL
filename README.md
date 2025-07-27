@@ -1,20 +1,23 @@
 # TEBTRMNL — Telegram eBook Bot for TRMNL
 
-A Telegram bot for reading and navigating PDF documents, with integration to the TRMNL platform for custom plugin workflows.
+A Telegram bot for reading and navigating PDF and EPUB documents, with integration to the TRMNL platform for custom plugin workflows.
 
 ![photo](photo.jpeg)
 
 ## Features
 
-- Send a PDF to the bot and navigate pages interactively
+- Send a PDF or EPUB to the bot and navigate pages interactively
+- EPUB files are automatically converted to PDF with optimized dimensions for TRMNL display
 - Each page is converted to an image and can be sent to TRMNL via webhook
 - User authorization via Telegram user IDs
 - Dockerized deployment with `uv` for fast Python dependency management
+- Configurable display dimensions via environment variables
 
 ## Project Structure
 
 - `src/main.py` — Bot entrypoint
 - `src/pdf_utils.py` — PDF page/image utilities
+- `src/epub_utils.py` — EPUB to PDF conversion utilities
 - `src/trmnl_utils.py` — TRMNL webhook integration
 - `src/markup/` — Liquid templates
 - `src/docker-compose.yml` / `Dockerfile` — Containerization
@@ -37,6 +40,8 @@ Create a `.env` file in the project root:
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TRMNL_PLUGIN_UUID=your_trmnl_plugin_uuid
 TRMNL_API_BASE=https://usetrmnl.com/api
+TRMNL_WIDTH=480                 # (optional) display width in pixels, default: 480
+TRMNL_HEIGHT=800                # (optional) display height in pixels, default: 800
 FILTER_USER_IDS=123456,789012   # (optional) comma-separated Telegram user IDs
 ```
 

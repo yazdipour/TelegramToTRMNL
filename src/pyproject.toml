@@ -11,4 +11,5 @@ dependencies = [
     "pillow>=11.3.0",
     "python-telegram-bot>=22.3",
     "requests>=2.32.4",
+    "reportlab>=4.0.8",
 ]
