@@ -12,6 +12,9 @@ A Telegram bot for reading and navigating PDF and EPUB documents, with integrati
 - User authorization via Telegram user IDs
 - Dockerized deployment with `uv` for fast Python dependency management
 - Configurable display dimensions via environment variables
+- Navigation buttons for page control
+
+![navigation](nav.jpg)
 
 ## Project Structure
 
