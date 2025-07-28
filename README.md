@@ -57,9 +57,7 @@ FILTER_USER_IDS=123456,789012   # (optional) comma-separated Telegram user IDs
 ### 4. Build & Run with Docker Compose (Recommended)
 
 ```fish
-docker compose build
 docker compose up -d
-docker compose logs -f tebt
 ```
 
 ### 5. Manual Docker Build/Run
