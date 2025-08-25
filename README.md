@@ -5,10 +5,7 @@ A versatile Telegram bot that displays various content types on your TRMNL devic
 ![photo](photo.jpeg)
 
 > [!WARNING]  
-> This project was originally created for the [TRMNL Book Reader Hackathon](https://usetrmnl.com/blog/hackathon-book-readers) but has evolved into a general-purpose content display bot. It is not intended for production use and may contain bugs or incomplete features. Use at your own risk.
-
-> [!NOTE]  
-> This project works great with [the new high refresh rate TRMNL displays](https://x.com/useTRMNL/status/1946001923850547700). If you have one, please try it out and share your feedback!
+> This project was originally created for the [TRMNL Book Reader Hackathon](https://usetrmnl.com/blog/hackathon-book-readers-winners) but has evolved into a general-purpose content display bot. It is not intended for production use and may contain bugs or incomplete features. Use at your own risk.
 
 ## Features
 
