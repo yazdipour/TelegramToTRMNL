@@ -1,7 +1,7 @@
 [project]
-name = "TEBTRMNL"
-version = "0.1.0"
-description = "A Telegram bot for reading documents"
+name = "telegram-to-trmnl"
+version = "0.2.0"
+description = "A versatile Telegram bot that displays images, PDFs, and EPUBs on TRMNL devices"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

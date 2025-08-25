@@ -23,7 +23,7 @@ class BotAuthHandler:
             return False
         return True
 
-class PDFHandler:
+class TRMNLHandler:
     def __init__(self, trmnl_utils):
         self.trmnl_utils = trmnl_utils
 
@@ -34,12 +34,14 @@ class PDFHandler:
             if not success:
                 await BotMessageHandler.send_error(
                     update,
-                    f"Failed to send image to TRMNL: {error}",
+                    "Failed to send to TRMNL. Please check your TRMNL configuration.",
                     f"Failed to send image to TRMNL: {error}"
                 )
+            else:
+                logger.info(f"Successfully sent image to TRMNL: {file.file_path}")
         except Exception as e:
             await BotMessageHandler.send_error(
                 update,
-                "Failed to process image",
+                "Failed to process image for TRMNL",
                 f"Error processing TRMNL response: {str(e)}"
             )
