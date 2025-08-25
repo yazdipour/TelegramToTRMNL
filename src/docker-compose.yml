@@ -1,7 +1,7 @@
 services:
-  tebt:
+  telegram-to-trmnl:
     build: .
-    image: trmnl-tebt
+    image: telegram-to-trmnl
     env_file:
       - .env
     # Mount source files but preserve installed packages
