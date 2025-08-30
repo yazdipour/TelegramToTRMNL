@@ -1,18 +1,10 @@
 services:
   telegram-to-trmnl:
-    build: .
+    build: ./src/.
     image: telegram-to-trmnl
     env_file:
-      - .env
+      - ./src/.env
     # Mount source files but preserve installed packages
-    volumes:
-      - ./main.py:/app/main.py
-      - ./bot_utils.py:/app/bot_utils.py
-      - ./pdf_utils.py:/app/pdf_utils.py
-      - ./epub_utils.py:/app/epub_utils.py
-      - ./trmnl_utils.py:/app/trmnl_utils.py
-      - ./shared.liquid:/app/shared.liquid
-      - ./markup:/app/markup
     environment:
       # Suppress UV hardlink warning
       - UV_LINK_MODE=copy
