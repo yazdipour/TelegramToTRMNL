@@ -4,9 +4,6 @@ A versatile Telegram bot that displays various content types on your TRMNL devic
 
 ![photo](photo.jpeg)
 
-> [!WARNING]  
-> This project was originally created for the [TRMNL Book Reader Hackathon](https://usetrmnl.com/blog/hackathon-book-readers-winners) but has evolved into a general-purpose content display bot. It is not intended for production use and may contain bugs or incomplete features. Use at your own risk.
-
 ## Features
 
 - **📷 Image Support**: Send any image (JPG, PNG, GIF, etc.) and instantly display it on TRMNL
